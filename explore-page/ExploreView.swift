@@ -14,9 +14,13 @@ struct ExploreView: View {
                 HeaderView()
                 ScrollView{
                     MenuView()
+                    Divider()
                     BannerScrollView(imageNames: imageBanner)
                     Spacer()
                     Divider()
+                    ScheduleView()
+                    Divider()
+                    
                 }
             }
         }

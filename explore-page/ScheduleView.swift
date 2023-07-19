@@ -54,14 +54,36 @@ struct ScheduleView: View {
                 Spacer()
             }
             
-            
-            
+            HStack{
+                VStack(alignment: .leading){
+                    Text("\(Image(systemName: "flag.checkered")) Lebak Bulus Grab")
+                        .fontWeight(.bold)
+                        .font(.system(size: 14))
+                        .foregroundColor(Color("Primary"))
+                    
+                    ScheduleCardView(arrival: "09.47", duration: "in 6 mins", color: "Secondary")
+                    ScheduleCardView(arrival: "09.55", duration: "in 14 mins", color: "Secondary")
+                    
+                }
+                
+                VStack(alignment: .leading){
+                    Text("\(Image(systemName: "flag.checkered")) Bundaran HI")
+                        .fontWeight(.bold)
+                        .font(.system(size: 14))
+                        .foregroundColor(Color("Primary"))
+                    
+                    ScheduleCardView(arrival: "09.42", duration: "in 6 mins", color: "Primary")
+                    ScheduleCardView(arrival: "09.50", duration: "in 14 mins", color: "Primary")
+                    
+                }
+                
+            }
         }
     }
-}
-
-struct ScheduleView_Previews: PreviewProvider {
-    static var previews: some View {
-        ScheduleView()
+    
+    struct ScheduleView_Previews: PreviewProvider {
+        static var previews: some View {
+            ScheduleView()
+        }
     }
 }
