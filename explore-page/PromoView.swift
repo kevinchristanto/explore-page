@@ -1,5 +1,5 @@
 //
-//  PartnerView.swift
+//  PromoView.swift
 //  explore-page
 //
 //  Created by Kevin Christanto on 19/07/23.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct PartnerView: View {
+struct PromoView: View {
     var body: some View {
         VStack(alignment: .leading){
             NavigationLink{
-                PartnerDetailView(partners: partnersMRT)
+                PromoDetailView()
             } label: {
                 HStack{
-                    Text("Check this out \(Image(systemName: "arrow.right.circle.fill"))")
+                    Text("Discover Exciting Promos! \(Image(systemName: "arrow.right.circle.fill"))")
                         .fontWeight(.bold)
                         .font(.system(size: 16))
                         .foregroundColor(Color("Primary"))
@@ -26,7 +26,7 @@ struct PartnerView: View {
             }
             
             HStack{
-                Text("New Level in Style!")
+                Text("Recommended deals you don’t want to miss!")
                     .fontWeight(.medium)
                     .font(.system(size: 12))
                     .foregroundColor(.gray)
@@ -34,13 +34,16 @@ struct PartnerView: View {
                     .padding(.leading, 20)
                 Spacer()
             }
+            
+            PromoScrollView(imageNames: imagePromo)
+            
         }
-        PartnerCardView(partners: partnersMRT)
+
     }
 }
 
-struct PartnerView_Previews: PreviewProvider {
+struct PromoView_Previews: PreviewProvider {
     static var previews: some View {
-        PartnerView()
+        PromoView()
     }
 }

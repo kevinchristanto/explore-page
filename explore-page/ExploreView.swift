@@ -20,7 +20,15 @@ struct ExploreView: View {
                     Divider()
                     ScheduleView()
                     Divider()
-                    
+                    PartnerView()
+                    Divider()
+                    VStack{
+                        PromoView()
+                        Divider()
+                        AttractionView()
+                        Divider()
+                        NewsView()
+                    }
                 }
             }
         }

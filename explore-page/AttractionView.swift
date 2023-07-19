@@ -1,5 +1,5 @@
 //
-//  PartnerView.swift
+//  AttractionView.swift
 //  explore-page
 //
 //  Created by Kevin Christanto on 19/07/23.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct PartnerView: View {
+struct AttractionView: View {
     var body: some View {
         VStack(alignment: .leading){
             NavigationLink{
-                PartnerDetailView(partners: partnersMRT)
+                AttractionDetailView()
             } label: {
                 HStack{
-                    Text("Check this out \(Image(systemName: "arrow.right.circle.fill"))")
+                    Text("Must-see Attractions! \(Image(systemName: "arrow.right.circle.fill"))")
                         .fontWeight(.bold)
                         .font(.system(size: 16))
                         .foregroundColor(Color("Primary"))
@@ -26,7 +26,7 @@ struct PartnerView: View {
             }
             
             HStack{
-                Text("New Level in Style!")
+                Text("Explore every inch of there popular attractions!")
                     .fontWeight(.medium)
                     .font(.system(size: 12))
                     .foregroundColor(.gray)
@@ -34,13 +34,15 @@ struct PartnerView: View {
                     .padding(.leading, 20)
                 Spacer()
             }
+            
+            AttractionScrollView(imageNames: imageAttraction)
+
         }
-        PartnerCardView(partners: partnersMRT)
     }
 }
 
-struct PartnerView_Previews: PreviewProvider {
+struct AttractionView_Previews: PreviewProvider {
     static var previews: some View {
-        PartnerView()
+        AttractionView()
     }
 }
